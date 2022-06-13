@@ -37,4 +37,4 @@ RUN [ -x "$(set -x; command -v rustup)" ] \
 
 RUN cd /move; cargo build -p move-cli
 
-ENTRYPOINT ["/move/target/debug/move"]
+RUN mv /move/target/debug/move /usr/bin/move
